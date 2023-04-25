@@ -1,0 +1,9 @@
+img {
+  width: 400px;
+  height: 300px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--clr-gray-light);
+}

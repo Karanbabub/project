@@ -1,0 +1,30 @@
+<div class="main">
+  <div>
+    <img src="../../../assets/images/Logo.png" />
+  </div>
+  <div (click)="gotourl('')" [class.selected]="url === '/'">
+    Home
+    <hr />
+  </div>
+  <div (click)="gotourl('about-us')" [class.selected]="url === '/about-us'">
+    AboutUs
+    <hr />
+  </div>
+  <!-- <div (click)="gotourl('client-register')"  [class.selected]="url === '/client-register'">Register</div> -->
+  <div
+    (click)="gotourl('client-login')"
+    [class.selected]="url === '/client-login'"
+  >
+    ClientLogin
+    <hr />
+  </div>
+  <div (click)="gotourl('login')" [class.selected]="url === '/login'">
+    AdminLogin
+    <hr />
+  </div>
+  <div (click)="gotourl('contact-us')" [class.selected]="url === '/contact-us'">
+    Contactus
+    <hr />
+  </div>
+  <br />
+</div>

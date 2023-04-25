@@ -1,0 +1,74 @@
+<div class="text-center">
+    <div class="form-signin w-100 m-auto">
+        <form [formGroup]="clientLoginForm">
+            <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                    formControlName="email" />
+                <label for="floatingInput">Email address</label>
+                <div *ngIf="
+              clientLoginForm.controls['email'].invalid &&
+              (clientLoginForm.controls['email'].dirty ||
+                clientLoginForm.controls['email'].touched)
+            " class="error-message">
+                    <div *ngIf="clientLoginForm.controls['email'].errors?.['required']">
+                        Email should not blank
+                    </div>
+                    <div *ngIf="clientLoginForm.controls['email'].errors?.['pattern']">
+                        Enter Valid email
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                    formControlName="password" />
+                <label for="floatingPassword">Password</label>
+                <!-- Password Validation code -->
+                <div *ngIf="
+              clientLoginForm.controls['password'].invalid &&
+              (clientLoginForm.controls['password'].dirty ||
+                clientLoginForm.controls['password'].touched)
+            " class="error-message">
+                    <div *ngIf="clientLoginForm.controls['password'].errors?.['required']">
+                        Password should not blank
+                    </div>
+                    <!-- <div *ngIf="clientLoginForm.controls['password'].errors?.['maxlength']">
+                            Maximum 8 character required
+                        </div> -->
+                    <div *ngIf="clientLoginForm.controls['password'].errors?.['minlength']">
+                        Minium 8 character required
+                    </div>
+                </div>
+                <!--End of Password Validation -->
+            </div>
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me" /> Remember me
+                </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="signIn()"
+                mat-raised-buttoncolor="primary" [disabled]="
+            !clientLoginForm.controls['password'].valid ||
+            !clientLoginForm.controls['email'].valid
+          ">
+                Sign in
+            </button>
+
+            <br />
+            <div class="new-user-register">
+                Don`t have an account yet?
+                <span class="sign-up" (click)="routeToNewUser()">Register</span>
+            </div>
+            <br />
+            <div class="sign-up" (click)="routeToForgotPassword()">
+                forgot password ?
+            </div>
+            <br />
+            <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
+        </form>
+    </div>
+</div>

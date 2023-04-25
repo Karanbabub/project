@@ -1,0 +1,136 @@
+<br />
+<div class="container">
+  <div
+    id="carouselExampleDark"
+    class="carousel carousel-dark slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img [src]="images[0]" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img [src]="images[1]" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img [src]="images[2]" height="500" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="menu-section-heading">Explore Products</h2>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 pointer" (click)="gotoLogin()">
+            <div class="shadow menu-item-card p-3 mb-3">
+              <img
+                src="../../../assets/images/Asus Zeyphrus.jpg"
+                class="menu-item-image w-100"
+              />
+              <h1 class="menu-card-title">Gamin Laptop</h1>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 pointer" (click)="gotoLogin()">
+            <div class="shadow menu-item-card p-3 mb-3">
+              <img
+                src="../../../assets/images/Xbox.jpeg"
+                class="menu-item-image w-100"
+              />
+              <h1 class="menu-card-title">Xbox</h1>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 pointer" (click)="gotoLogin()">
+            <div class="shadow menu-item-card p-3 mb-3">
+              <img
+                src="../../../assets/images/Rog 6 Asus.jpg"
+                class="menu-item-image w-100"
+              />
+              <h1 class="menu-card-title">Gaming Mobiles</h1>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 pointer" (click)="gotoLogin()">
+            <div class="shadow menu-item-card p-3 mb-3">
+              <img
+                src="../../../assets/images/PS5.png"
+                class="menu-item-image w-100"
+              />
+              <h1 class="menu-card-title">Playstations</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <img
+              src="../../../assets/images/Logo.png"
+              class="food-munch-logo"
+            />
+            <h1 class="footer-section-mail-id"></h1>
+            <p class="footer-section-address">
+              Thiyagadurgam, Kallakurichi,Tamil Nadu
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
